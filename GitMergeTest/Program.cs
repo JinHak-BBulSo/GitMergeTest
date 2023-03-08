@@ -3,14 +3,7 @@ using System.Collections.Generic;
 
 namespace GitMergeTest
 {
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
-    }
-
+    // Ruler 클래스 위치 수정
     public class Ruler
     {
         private const float ONE_INCH = 2.54F;
@@ -27,5 +20,13 @@ namespace GitMergeTest
             Console.WriteLine($"{this.Centimeter}츠 sms {this.INCH}inch 입니다.");
         }
     }
-    
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Ruler ruler = new Ruler(10);
+            ruler.Run();
+        }
+    }
 }
