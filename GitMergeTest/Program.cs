@@ -19,7 +19,8 @@ namespace GitMergeTest
         public float INCH
         {
             get { return Centimeter * ONE_INCH; }
-            private set { Centimeter = (int)(value / ONE_INCH); }
+            // SetInch 추가
+            private set { this.SetInch(value); }
         }
         public Ruler(int cmValue) { Centimeter = cmValue; }
 
@@ -27,6 +28,8 @@ namespace GitMergeTest
         {
             Console.WriteLine($"{this.Centimeter}cm 는 {this.INCH}inch 입니다.");
         }
+
+        private void SetInch(float inchValue) { Centimeter = (int)(inchValue / ONE_INCH); }
     }
     
 }
