@@ -3,10 +3,19 @@ using System.Collections.Generic;
 
 namespace GitMergeTest
 {
+    // 유저 입력 기능 추가
     internal class Program
     {
         static void Main(string[] args)
         {
+            string userInput = string.Empty;
+            Console.WriteLine("이 프로그램은 Cm를 Inch로 변환하는 프로그램입니다.");
+            Console.Write("Cm 값을 입력:");
+            userInput = Console.ReadLine();
+
+            int cmInput = 0;
+            int.TryParse(userInput, out cmInput);
+
             Ruler ruler = new Ruler(10);
             ruler.Run();
         }
